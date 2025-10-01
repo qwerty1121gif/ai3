@@ -19,14 +19,14 @@ clf = DecisionTreeClassifier()
 clf.fit(X_train,y_train)
 
 y_pred = clf.predict(X_test)
-print(f"Accuracy: {accuracy_score(y_test,y_pred):.2f}")
+print(f"Accuracy: {accuracy_score(y_test,y_pred):}")
 
 def main():
     screen = int(input("Введите кол-во часов у экрана: "))
     sleep = int(input("Ваедите количество часов сна: "))
     sample = np.array([[screen,sleep]])
     result = clf.predict(sample)
-    print("Prediction:",result[0])
+    print("Скорее всего будешь",result[0])
 
 if __name__ == "__main__":
     main()
